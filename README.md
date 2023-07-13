@@ -15,8 +15,7 @@ Este é um projeto em Python e Django que faz o scraping da página do Open Food
 
 Para instalar e usar este projeto, siga os seguintes passos:
 
-1. Clone este repositório:
-`git clone https://github.com/seu_usuario/backend-challenge-20220626.git`
+1. Clone este repositório
 
 2. Instale as dependências do projeto:
 `pip3 install -r requirements.txt`
