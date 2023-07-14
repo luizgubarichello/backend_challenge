@@ -63,6 +63,8 @@ Assim as funcionalidades principais do projeto foram concluidas.
 
 Para os extras:
 
-1. Gerar a documentação da API utilizando o conceito de Open API 3.0 por meio da biblioteca [DRF OpenAPI 3](https://drf-spectacular.readthedocs.io/en/latest/readme.html#installation)
+1. Gerar a documentação da API utilizando o conceito de Open API 3.0 por meio da biblioteca [DRF OpenAPI 3](https://drf-spectacular.readthedocs.io/en/latest/readme.html#installation) -> rota utilizada para ver a documentacao = `/docs`.
+
+2. Escrever os testes unitários para os endpoints da API -> a biblioteca `pytest` sera utilizada para isso, onde os testes estao escritos no arquivo `tests.py` da pasta do app `products`. Para executar os testes usando o pytest, basta usar o comando `pytest` na raiz do projeto.
 
 >  This is a challenge by [Coodesh](https://coodesh.com/)

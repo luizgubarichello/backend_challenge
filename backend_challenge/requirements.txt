@@ -3,4 +3,6 @@ Django==4.2.2
 djangorestframework==3.14.0
 django-crontab==0.7.1
 drf-spectacular==0.26.3
+pytest-django==4.5.2
+pytest==7.4.0
 Requests==2.31.0

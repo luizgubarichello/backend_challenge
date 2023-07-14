@@ -6,7 +6,7 @@ from rest_framework.pagination import PageNumberPagination
 
 class HomeView(generics.GenericAPIView):
     def get(self, request):
-        return Response({"message": "Backend Challenge 20201026"})
+        return Response({"message": "Fullstack Challenge 20201026"})
 
 class ProductDetailView(generics.RetrieveAPIView):
     queryset = Product.objects.all()
