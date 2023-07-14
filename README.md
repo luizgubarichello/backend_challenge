@@ -2,6 +2,8 @@
 
 Este é um projeto em Python e Django que faz o scraping da página do Open Food Facts uma vez ao dia e importa os produtos para um banco de dados. O projeto também expõe uma REST API para consultar os produtos importados.
 
+[Link da Apresentacao em Video](https://www.loom.com/share/b6ff8a08be464e5aa06edb977e37d361)
+
 ## Tecnologias usadas
 
 - Python
