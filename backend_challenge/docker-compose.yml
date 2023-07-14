@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  db:
+    # Usar uma imagem do PostgreSQL 13 como serviço de banco de dados
+    image: postgres:13
+    # Definir as variáveis de ambiente para o banco de dados
+    environment:
+      - POSTGRES_DB=backend_challenge_db
+      - POSTGRES_USER=backend_challenge_user
+      - POSTGRES_PASSWORD=backend_challenge_password
+    # Expor a porta 5432 do container para a máquina host
+    ports:
+      - "5432:5432"
+    # Montar um volume para persistir os dados do banco de dados no container
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  web:
+    # Construir a imagem do nosso projeto a partir do Dockerfile
+    build: .
+    # Definir a variável de ambiente DJANGO_SETTINGS_MODULE para usar as configurações do Django adequadas para o Docker
+    environment:
+      - DJANGO_SETTINGS_MODULE=backend_challenge.settings_docker
+    # Executar o comando python manage.py runserver 0:8000 para iniciar o servidor web do Django no container
+    command: python manage.py runserver 0:8000
+    # Depender do serviço db para iniciar o serviço web
+    depends_on:
+      - db
+    # Expor a porta 8000 do container para a máquina host
+    ports:
+      - "8000:8000"
+    # Montar um volume para sincronizar os arquivos do projeto entre o container e a máquina host
+    volumes:
+      - .:/code
+
+volumes:
+  postgres_data:

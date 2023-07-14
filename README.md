@@ -63,8 +63,10 @@ Assim as funcionalidades principais do projeto foram concluidas.
 
 Para os extras:
 
-1. Gerar a documentação da API utilizando o conceito de Open API 3.0 por meio da biblioteca [DRF OpenAPI 3](https://drf-spectacular.readthedocs.io/en/latest/readme.html#installation) -> rota utilizada para ver a documentacao = `/docs`.
+1. Configurar o Docker criando os arquivos `Dockerfile` e `docker-compose.yml` na raiz do projeto, bem como o arquivo `settings_docker.py` na pasta do projeto para o Django rodar no Docker -> Executar o `comando docker-compose up -d` para construir as imagens e iniciar os containers do nosso projeto e do banco de dados -> Executar o comando `docker-compose exec web python manage.py migrate` para criar as tabelas do banco de dados usando as migrações do Django -> Acessar a url `http://localhost:8000/` no navegador para ver o nosso projeto rodando no Docker.
 
-2. Escrever os testes unitários para os endpoints da API -> a biblioteca `pytest` sera utilizada para isso, onde os testes estao escritos no arquivo `tests.py` da pasta do app `products`. Para executar os testes usando o pytest, basta usar o comando `pytest` na raiz do projeto.
+2. Gerar a documentação da API utilizando o conceito de Open API 3.0 por meio da biblioteca [DRF OpenAPI 3](https://drf-spectacular.readthedocs.io/en/latest/readme.html#installation) -> rota utilizada para ver a documentacao = `/docs`.
+
+3. Escrever os testes unitários para os endpoints da API -> a biblioteca `pytest` sera utilizada para isso, onde os testes estao escritos no arquivo `tests.py` da pasta do app `products`. Para executar os testes usando o pytest, basta usar o comando `pytest` na raiz do projeto.
 
 >  This is a challenge by [Coodesh](https://coodesh.com/)
