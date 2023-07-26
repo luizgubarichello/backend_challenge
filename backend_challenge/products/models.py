@@ -8,9 +8,9 @@ class Product(models.Model):
     url = models.URLField()
     product_name = models.CharField(max_length=200)
     quantity = models.CharField(max_length=50)
-    categories = models.CharField(max_length=200)
-    packaging = models.CharField(max_length=200)
-    brands = models.CharField(max_length=200)
+    categories = models.CharField(max_length=1000)
+    packaging = models.CharField(max_length=1000)
+    brands = models.CharField(max_length=1000)
     image_url = models.URLField()
 
     def __str__(self):

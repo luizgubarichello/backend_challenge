@@ -21,6 +21,9 @@ services:
     build: .
     # Definir a variável de ambiente DJANGO_SETTINGS_MODULE para usar as configurações do Django adequadas para o Docker
     environment:
+      - POSTGRES_DB=backend_challenge_db
+      - POSTGRES_USER=backend_challenge_user
+      - POSTGRES_PASSWORD=backend_challenge_password
       - DJANGO_SETTINGS_MODULE=backend_challenge.settings_docker
     # Executar o comando python manage.py runserver 0:8000 para iniciar o servidor web do Django no container
     command: python manage.py runserver 0:8000

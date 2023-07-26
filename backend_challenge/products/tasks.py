@@ -22,7 +22,7 @@ def scrape_products():
     links = soup.find_all('a', title=True, href=re.compile(r'^/product/'))
 
     # limitar a importação a somente 100 produtos
-    links = links[:100]
+    links = links[:10]
 
     # percorrer cada link e obter os dados do produto
     for link in links:

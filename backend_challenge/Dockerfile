@@ -4,6 +4,10 @@ FROM python:3.10.6
 # Definir a variável de ambiente PYTHONUNBUFFERED para evitar o buffering da saída do Python
 ENV PYTHONUNBUFFERED 1
 
+# Instalar Cron
+RUN apt-get update
+RUN apt-get -y install cron
+
 # Criar um diretório para o nosso projeto dentro do container
 RUN mkdir /code
 
