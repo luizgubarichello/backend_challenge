@@ -26,12 +26,14 @@ Para instalar e usar este projeto, siga os seguintes passos:
 `python3 manage.py migrate`
 
 4. Adicione cronjobs do seu sistema operacional:
-`python3 manage.py crontab add`
+`python3 manage.py crontab add` (apenas LINUX, caso use windows execute o projeto via WSL)
 
-5. Rode o servidor de desenvolvimento:
+5. Abra o Django Shell via `python manage.py shell` e faça o primeiro scrape para popular o banco de dados utilizando os comandos `from products.tasks import scrape_products` -> `scrape_products()`
+
+6. Rode o servidor de desenvolvimento:
 `python3 manage.py runserver`
 
-6. Acesse a API no navegador ou em algum cliente HTTP:
+7. Acesse a API no navegador ou em algum cliente HTTP:
 
 - http://localhost:8000/ para ver a mensagem da home
 - http://localhost:8000/products/3661112502850/ para ver os detalhes de um produto pelo código
